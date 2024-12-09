@@ -2,13 +2,14 @@
 
 namespace Blazing.Mvvm.ParentChildSample;
 
-public static class ServicesExtension
-{
-    public static IServiceCollection AddViewModels(this IServiceCollection services)
-    {
-        services.AddTransient<HomeViewModel>();
-        services.AddTransient<ChildViewModel>();
+// obsolete - now uses the ViewModelDefinition attribute & auto registration
+//public static class ServicesExtension
+//{
+//    public static IServiceCollection AddViewModels(this IServiceCollection services)
+//    {
+//        services.AddTransient<HomeViewModel>();
+//        services.AddTransient<ChildViewModel>();
 
-        return services;
-    }
-}
+//        return services;
+//    }
+//}

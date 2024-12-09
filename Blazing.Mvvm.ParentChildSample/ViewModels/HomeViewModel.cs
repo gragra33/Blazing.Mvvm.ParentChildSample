@@ -6,6 +6,7 @@ using CommunityToolkit.Mvvm.Input;
 
 namespace Blazing.Mvvm.ParentChildSample.ViewModels;
 
+[ViewModelDefinition(Lifetime = ServiceLifetime.Transient)]
 public partial class HomeViewModel : RecipientViewModelBase<ChildMessage>
 {
     private int _count;
@@ -26,12 +27,13 @@ public partial class HomeViewModel : RecipientViewModelBase<ChildMessage>
             .OrderBy(int.Parse)
             .Select(index => $"Child #{index}");
 
+    // obsolete
     // Messaging...
-    public override Task Loaded()
-    {
-        IsActive = true;
-        return base.Loaded();
-    }
+    //public override Task Loaded()
+    //{
+    //    IsActive = true;
+    //    return base.Loaded();
+    //}
 
     // inbound message
     public override void Receive(ChildMessage child)

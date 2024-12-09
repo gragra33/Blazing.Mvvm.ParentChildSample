@@ -6,6 +6,7 @@ using CommunityToolkit.Mvvm.Messaging;
 
 namespace Blazing.Mvvm.ParentChildSample.ViewModels;
 
+[ViewModelDefinition(Lifetime = ServiceLifetime.Transient)]
 public partial class ChildViewModel : ViewModelBase
 {
     [ObservableProperty]
